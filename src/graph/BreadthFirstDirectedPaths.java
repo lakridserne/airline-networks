@@ -1,5 +1,6 @@
 package graph;
 import graph.ArrayQueue;
+import stdlib.*;
 
 public class BreadthFirstDirectedPaths {
     private static final int INFINITY = Integer.MAX_VALUE;
@@ -55,7 +56,7 @@ public class BreadthFirstDirectedPaths {
 
     // BFS from multiple sources
     private void bfs(Digraph G, Iterable<Integer> sources) {
-        ArrayQueue<Integer> q = new ArrayQueue<>();
+        Queue<Integer> q = new Queue<Integer>();
         for (int s : sources) {
             marked[s] = true;
             distTo[s] = 0;
